@@ -1,0 +1,32 @@
+@startuml
+
+|Zorgaanbieder (func. beheerder)|
+start
+:1. Lisa autoriseert MedConnect
+voor endpointbeheer;
+
+|Adresseringsfunctie|
+:1a. Verifieert autorisatie;
+
+|IT-dienstverlener|
+:2. Jan logt in namens de dienstverlener;
+:3. Jan voegt endpoints toe;
+
+|Adresseringsfunctie|
+:3a. Valideert endpoint en slaat het op;
+
+|IT-dienstverlener|
+:4. Jan koppelt endpoints aan de organisatie;
+|Adresseringsfunctie|
+:4a. Legt koppeling vast met herkomst;
+
+|IT-dienstverlener|
+:5. Jan publiceert endpoints;
+
+|Adresseringsfunctie|
+:5a. Endpoints zichtbaar voor zoekers;
+
+|IT-dienstverlener|
+:6. Jan verifieert via inzage-interface;
+stop
+@enduml
