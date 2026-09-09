@@ -27,6 +27,10 @@ da -up-> UC03
 dz -up-> UC03
 eind -down-> UC04
 xis -up-> UC05
+UC01 -[hidden]down- da
+UC03 -[hidden]down- dz
+UC04 -[hidden]right- UC05
+UC05 -[hidden]down- xis
 legend bottom left
 <b>Legenda</b>
 <#transparent,#transparent>| ────── | Primaire associatie |
