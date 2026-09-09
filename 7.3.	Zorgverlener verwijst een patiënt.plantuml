@@ -1,0 +1,20 @@
+@startuml
+|Zorgverlener|
+start
+:1 Dr West opent verwijsmodule in HIS;
+|Zorginformatiesysteem|
+:1a opent zoekinterface verwijsmodule;
+|Zorgverlener|
+:2 Zoekt naar orthopedie in Ziekenhuis Oost;
+|Zorginformatiesysteem|
+:2a Toont afdeling Orthopedie Ziekenhuis Oost;
+|Zorgverlener|
+:3 Kiest afdeling Orthopedie;
+|Zorginformatiesysteem|
+:3a Toont optie "Verwijzing versturen" \nbij afdeling;
+|Zorgverlener|
+:4 Selecteert "Verwijzing versturen";
+|Zorginformatiesysteem|
+:4a Gebruikt de juiste endpoints \nvoor de verwijzing;
+stop
+@enduml

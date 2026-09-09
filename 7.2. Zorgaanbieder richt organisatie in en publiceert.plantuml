@@ -1,0 +1,34 @@
+@startuml
+
+' Lanes vooraf declareren bepaalt de kolomvolgorde
+|Zorgaanbieder|
+|Generieke functie Adressering|
+
+|Zorgaanbieder|
+start
+:1. Sanne opent organisatie-
+structuur van AZU;
+
+:2. Voegt nieuwe afdeling 
+Neuro-oncologie toe;
+
+|Generieke functie Adressering|
+:3a. Valideert nieuwe gegevens 
+en maakt beschikbaar;
+
+|Zorgaanbieder|
+:3. Sanne registreert koppelingen 
+tussen nieuwe afdeling 
+en bestaande endpoints HealthIT
+(verwijzing + BGZ);
+
+|Generieke functie Adressering|
+:3a. Valideert en maakt koppelingen 
+tussen nieuwe afdeling 
+en endpoints beschikbaar;
+
+|Zorgaanbieder|
+:4. Sanne controleert 
+de adresgegevens;
+stop
+@enduml

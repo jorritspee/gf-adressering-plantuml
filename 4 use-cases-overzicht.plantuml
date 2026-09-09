@@ -1,0 +1,36 @@
+@startuml usecases
+
+actor "Zorgaanbieder" as zorg
+actor "Eindgebruiker" as eind
+actor "Dienstverlener \nAdressering" as da
+actor "Dienstverlener \nZorginformatiesysteem" as dz
+actor "Zorginformatiesysteem" as xis <<systeem>>
+
+package "Generieke functie Adressering" {
+  package "BEHEER" {
+    usecase "UC-01\nAutoriseren dienstverleners" as UC01
+    usecase "UC-02\nBeheren organisatiekenmerken" as UC02
+    usecase "UC-03\nBeheren endpoints" as UC03
+  }
+  package "GEBRUIK" {
+    usecase "UC-04\nZoeken zorgaanbieder, locatie of zorgdienst" as UC04
+    usecase "UC-05\nOpvragen endpoints" as UC05
+  }
+}
+
+zorg --> UC01
+zorg --> UC02
+da .up.> UC02
+dz .up.> UC02
+zorg ..> UC03
+da -up-> UC03
+dz -up-> UC03
+eind -down-> UC04
+xis -up-> UC05
+
+legend bottom left
+|= |= Lijsttype |
+|< ----- >| Primaire associatie |
+|< - - - >| Secundaire associatie |
+endlegend
+@enduml

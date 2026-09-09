@@ -1,0 +1,23 @@
+@startuml
+|Zorgaanbieder|
+start
+:1. Lisa en Pieter stemmen migratieplan af;
+:2 Lisa autoriseert HuisSoft;
+|Nieuwe Dienstverlener \nZorginformatiesysteem \n(Huissoft)|
+:3 Pieter logt in, ziet autorisatie;
+:4 Voegt endpoints toe en koppelt deze aan praktijk;
+|Generieke functie Adressering|
+:4a Valideert wijziging en maakt deze beschikbaar. \nPraktijk tijdelijk dubbel bereikbaar;
+|Zorgaanbieder|
+:5 Lisa bekijkt de adresgegevens van “Huisartsenpraktijk Groenendaal”;
+:6 Maakt koppeling tussen oude endpoints en praktijk inactief;
+|Generieke functie Adressering|
+:6a Valideert wijziging en maakt deze beschikbaar;
+|Zorgaanbieder|
+:7 Lisa trekt autorisatie Medconnect in;
+|Generieke functie Adressering|
+:7a Valideert wijziging en trekt autorisatie Medconnect in;
+|Zorgaanbieder|
+:8 Lisa verifieert via inzageinterface;
+stop
+@enduml
